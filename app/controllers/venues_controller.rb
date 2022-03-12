@@ -10,8 +10,8 @@ class VenuesController < ApplicationController
 
   # GET /venues/1
   def show
-    if stale?(last_modified: @user.updated_at)
-      render json: @user
+    if stale?(last_modified: @venue.updated_at)
+      render json: @venue
     end
   end
 
